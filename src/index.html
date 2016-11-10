@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="leagueApp">
   <head>
     <meta charset="utf-8">
     <title>Untitled</title>
     <!-- styles -->
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="components/main/mainSass/main.css">
+    <link rel='icon' href='assets/league.jpg' type='image/jpg'>
   </head>
   <body ng-cloak>
-    <!-- sample angular code -->
-    <div class="container">
-      <div ng-controller="mainController as mainCtrl">
-        <p>{{ mainCtrl.greeting }}</p>
-      </div>
+    <div ui-view>
     </div>
     <!-- scripts -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.5.8/angular-touch.js"></script>
     <!-- config -->
     <script type="text/javascript" src="config/app.js"></script>
     <script type="text/javascript" src="config/config.js"></script>

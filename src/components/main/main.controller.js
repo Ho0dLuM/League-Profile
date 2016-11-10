@@ -3,12 +3,12 @@
   'use strict';
 
   angular
-    .module('myApp.components.main', [])
+    .module('leagueApp.components.main', [])
     .controller('mainController', mainController);
 
-  mainController.$inject = ['$scope'];
+  mainController.$inject = ['mainService'];
 
-  function mainController($scope) {
+  function mainController(mainService) {
     /*jshint validthis: true */
     this.greeting = 'Hello World!';
   }
