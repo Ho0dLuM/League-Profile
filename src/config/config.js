@@ -10,9 +10,9 @@
     $stateProvider
       .state('home', {
         url: '/home',
-        controller: 'mainController',
-        controllerAs: 'mainCtrl',
-        templateUrl: 'components/main/main.view.html'
+        controller: 'champController',
+        controllerAs: 'champCtrl',
+        templateUrl: 'components/champions/champions.view.html'
       });
 
     $urlRouterProvider
