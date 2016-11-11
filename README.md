@@ -13,6 +13,16 @@
 - render that data to page
 - create champion profile page
 
+# Update Database and API Endpoints
+
+- restructure schema and seed files to save new champions
+
+# Update API Endpoints
+
+- post route will be taking more data
+- get routes for champions
+- get single champion (front end??)
+
 # Save Create Champion to DB
 
 - send created champion to DB
