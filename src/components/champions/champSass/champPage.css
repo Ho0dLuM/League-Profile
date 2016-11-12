@@ -1,6 +1,7 @@
 body {
   font: Helvetica, sans-serif;
-  background-color: #2D2D2D;
+  background-image: url("../../../assets/champs.jpg");
+  background-repeat: no-repeat;
   color: #7DFF88; }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=champPage.css.map */

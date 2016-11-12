@@ -10,8 +10,11 @@
 
   function champController(champService) {
     /*jshint validthis: true */
-    this.greeting = 'Hello World!';
-    champService.getChamps();
+    champService.getChamps().then(() => {
+      console.log(this.riotChamps = champService.champions);
+      console.log(this.champSpells = champService.spells);
+    })
+
 
   }
 
