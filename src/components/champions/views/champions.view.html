@@ -1,0 +1,43 @@
+<nav>
+  <a href="/#/create">Create A Champion</a>
+</nav>
+<div ng-repeat="champion in champCtrl.riotChamps | orderBy:champCtrl.filter">
+  <div class="champ-cards">
+    <lore-directive>
+      <my-pane title="{{champion.name}}">
+      <img class="champ-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/champion/{{champion.image.full}}"/>
+      <ul>
+        <h5 class="enemy-tips">When Playing Against {{champion.title}}</h5>
+        <li>{{champion.enemytips[0]}}</li>
+        <li>{{champion.enemytips[1]}}</li>
+        <li ng-if="champion.enemytips[2]">{{champion.enemytips[2]}}</li>
+      </ul>
+    </my-pane>
+    <my-pane title="Lore">
+      <p>{{champion.lore}}</p>
+    </my-pane>
+    <my-pane title="Abilities">
+      <h5>Passive</h5>
+      <h6>{{champion.passive.name}}</h6>
+      <img class="passive-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/passive/{{champion.passive.image.full}}"/>
+      <p>{{champion.passive.description}}</p><hr>
+      <h5>Q</h5>
+      <h6>{{champion.spells[0].name}}</h6>
+      <img class="ability-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/spell/{{champion.spells[0].image.full}}"/>
+      <p>{{champion.spells[0].description}}</p><hr>
+      <h5>W</h5>
+      <h6>{{champion.spells[1].name}}</h6>
+      <img class="ability-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/spell/{{champion.spells[1].image.full}}"/>
+      <p>{{champion.spells[1].description}}</p><hr>
+      <h5>E</h5>
+      <h6>{{champion.spells[2].name}}</h6>
+      <img class="ability-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/spell/{{champion.spells[2].image.full}}"/>
+      <p>{{champion.spells[2].description}}</p><hr>
+      <h5>R</h5>
+      <h6>{{champion.spells[3].name}}</h6>
+      <img class="ability-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/spell/{{champion.spells[3].image.full}}"/>
+      <p>{{champion.spells[3].description}}</p><hr>
+    </my-pane>
+    </lore-directive>
+  </div>
+</div>

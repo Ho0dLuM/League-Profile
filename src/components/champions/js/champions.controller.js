@@ -10,9 +10,10 @@
 
   function champController(champService) {
     /*jshint validthis: true */
-    this.greeting = 'Hello World!';
-    champService.getChamps();
-
+    champService.getChamps().then(() => {
+      this.riotChamps = champService.champions;
+    });
+    this.filter = 'name';
   }
 
 })();
