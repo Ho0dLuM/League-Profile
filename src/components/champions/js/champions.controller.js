@@ -11,11 +11,9 @@
   function champController(champService) {
     /*jshint validthis: true */
     champService.getChamps().then(() => {
-      console.log(this.riotChamps = champService.champions);
-      console.log(this.champSpells = champService.spells);
-    })
-
-
+      this.riotChamps = champService.champions;
+    });
+    this.filter = 'name';
   }
 
 })();

@@ -7,7 +7,8 @@
       'ui.router',
       'ui.bootstrap',
       'leagueApp.config',
-      'leagueApp.components.champions'
+      'leagueApp.components.champions',
+      'leagueApp.components.create'
     ]);
 
 })();
