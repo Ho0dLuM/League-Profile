@@ -16,8 +16,8 @@
       createService.addChampion(this.champObj)
       .then((data) => {
         console.log(data);
-      })
-    }
+      });
+    };
 
     function initChamp() {
       const champObj = {

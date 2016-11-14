@@ -10,7 +10,6 @@
 
   const baseUrl = 'https://global.api.pvp.net/api/lol/static-data/na/v1.2/';
   const champApi = 'champion?champData=all&';
-  const apiKey = 'api_key=RGAPI-de0e9e3f-1825-4657-8c2b-0aef77152596';
   const customUrl = 'http://localhost:8080/api/v1/champions';
 
   function champService($http) {
