@@ -17,7 +17,6 @@
     champService.getChamps()
     .then((data) => {
       const results = data.data.data;
-      window.results = results;
       for (let name in results) {
         this.champions.push(results[name]);
         this.spells.push(results[name].passive);

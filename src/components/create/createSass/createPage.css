@@ -1,0 +1,19 @@
+.spellPcard, .spellQcard, .spellWcard, .spellEcard, .spellRcard {
+  border: 4px solid #7DFF88;
+  width: 100%;
+  height: 200px;
+  padding: 1%;
+  margin: 3%;
+  box-shadow: 5px 5px 5px #503D3F;
+  overflow: scroll; }
+
+.col-P, .col-Q, .col-W, .col-E, .col-R {
+  width: 19%;
+  margin-left: 1%;
+  float: left; }
+
+.spell-title {
+  margin-left: 5%;
+  color: #FFCF56; }
+
+/*# sourceMappingURL=createPage.css.map */
