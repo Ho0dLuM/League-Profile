@@ -21,8 +21,8 @@
         templateUrl: 'components/create/views/create.view.html'
       });
 
-    $urlRouterProvider
-      .otherwise('/home');
+    // $urlRouterProvider
+    //   .otherwise('/home');
   }
 
 })();

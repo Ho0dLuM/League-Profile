@@ -1,7 +1,7 @@
 <nav>
   <a href="/#/create">Create A Champion</a>
 </nav>
-<div ng-repeat="champion in champCtrl.riotChamps | orderBy:champCtrl.filter">
+<div ng-repeat="champion in champCtrl.champions | orderBy:champCtrl.filter">
   <div class="champ-cards">
     <lore-directive>
       <my-pane title="{{champion.name}}">
@@ -9,7 +9,7 @@
       <ul>
         <h5 class="enemy-tips">When Playing Against {{champion.title}}</h5>
         <li>{{champion.enemytips[0]}}</li>
-        <li>{{champion.enemytips[1]}}</li>
+        <li ng-if="champion.enemytips[1]">{{champion.enemytips[1]}}</li>
         <li ng-if="champion.enemytips[2]">{{champion.enemytips[2]}}</li>
       </ul>
     </my-pane>

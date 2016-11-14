@@ -11,24 +11,25 @@
   const baseUrl = 'https://global.api.pvp.net/api/lol/static-data/na/v1.2/';
   const champApi = 'champion?champData=all&';
   const apiKey = 'api_key=RGAPI-de0e9e3f-1825-4657-8c2b-0aef77152596';
+  const customUrl = 'http://localhost:8080/api/v1/champions';
 
   function champService($http) {
     /*jshint validthis: true */
-    this.champions = [];
-    this.spells = [];
+    this.champs = [];
 
     this.getChamps = () => {
-      return $http.get(baseUrl + champApi + apiKey)
+      return $http.get(baseUrl + champApi + apiKey);
+    };
+
+    this.customChamps = () => {
+      return $http.get(customUrl + '/1')
       .then((data) => {
-        const results = data.data.data;
+        const results = data;
         window.results = results;
-        for (let name in results) {
-          this.champions.push(results[name]);
-          this.spells.push(results[name].passive);
-          this.spells.push(results[name].spells);
-        }
+        this.champs.push(results);
       });
     };
+
   }
 
 })();

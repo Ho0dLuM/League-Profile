@@ -10,10 +10,24 @@
 
   function champController(champService) {
     /*jshint validthis: true */
-    champService.getChamps().then(() => {
-      this.riotChamps = champService.champions;
-    });
     this.filter = 'name';
+    this.champions = [];
+    this.spells = [];
+
+    champService.getChamps()
+    .then((data) => {
+      const results = data.data.data;
+      // window.results = results;
+      for (let name in results) {
+        this.champions.push(results[name]);
+        this.spells.push(results[name].passive);
+        this.spells.push(results[name].spells);
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
   }
 
 })();
