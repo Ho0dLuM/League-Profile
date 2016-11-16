@@ -23,8 +23,8 @@
         this.spells.push(results[name].spells);
       }
     })
-    .catch((err) => {
-      console.log(err);
+    .catch((error) => {
+      console.log(error);
     });
 
   }
