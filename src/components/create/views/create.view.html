@@ -2,6 +2,71 @@
   <a href="/#/home">home</a>
 </nav>
 
+<!-- passive ability -->
+<div class="col-P">
+  <h2 class="spell-title">Passive Abilities<hr></h2>
+  <div ng-repeat="spellP in createCtrl.spellsP | orderBy:createCtrl.filter">
+    <div class="spellPcard">
+      <h5>{{spellP.name}}</h5>
+      <img class="spell-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/passive/{{spellP.image.full}}"/>
+      <p>{{spellP.description}}</p>
+    </div>
+  </div>
+</div>
+<!-- end passive -->
+
+<!-- Spell Q -->
+<div class="col-Q">
+  <h2 class="spell-title">Spell Q<hr></h2>
+  <div ng-repeat="spellQ in createCtrl.spellsQ | orderBy:createCtrl.filter">
+    <div class="spellQcard">
+      <h5>{{spellQ.name}}</h5>
+      <img class="spell-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/spell/{{spellQ.image.full}}"/>
+      <p>{{spellQ.description}}</p>
+    </div>
+  </div>
+</div>
+<!-- end Q -->
+
+<!-- Spell W -->
+<div class="col-W">
+  <h2 class="spell-title">Spell W<hr></h2>
+  <div ng-repeat="spellW in createCtrl.spellsW | orderBy:createCtrl.filter">
+    <div class="spellWcard">
+      <h5>{{spellW.name}}</h5>
+      <img class="spell-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/spell/{{spellW.image.full}}"/>
+      <p>{{spellW.description}}</p>
+    </div>
+  </div>
+</div>
+<!-- end W -->
+
+<!-- Spell E -->
+<div class="col-E">
+  <h2 class="spell-title">Spell E<hr></h2>
+  <div ng-repeat="spellE in createCtrl.spellsE | orderBy:createCtrl.filter">
+    <div class="spellEcard">
+      <h5>{{spellE.name}}</h5>
+      <img class="spell-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/spell/{{spellE.image.full}}"/>
+      <p>{{spellE.description}}</p>
+    </div>
+  </div>
+</div>
+<!-- end E -->
+
+<!-- Spell R -->
+<div class="col-R">
+  <h2 class="spell-title">Spell R<hr></h2>
+  <div ng-repeat="spellR in createCtrl.spellsR | orderBy:createCtrl.filter">
+    <div class="spellRcard">
+      <h5>{{spellR.name}}</h5>
+      <img class="spell-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/spell/{{spellR.image.full}}"/>
+      <p>{{spellR.description}}</p>
+    </div>
+  </div>
+</div>
+<!-- end R -->
+
 <div class="container">
   <form ng-submit="createCtrl.addChamp()">
     <div class="form-group">
@@ -67,68 +132,3 @@
     <button type="submit" class="btn btn-default">Create</button>
   </form>
 </div>
-
-<!-- passive ability -->
-<div class="col-P">
-  <h2 class="spell-title">Passive Abilities<hr></h2>
-  <div ng-repeat="spellP in createCtrl.spellsP | orderBy:createCtrl.filter">
-    <div class="spellPcard">
-      <h5>{{spellP.name}}</h5>
-      <img class="spell-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/passive/{{spellP.image.full}}"/>
-      <p>{{spellP.description}}</p>
-    </div>
-  </div>
-</div>
-<!-- end passive -->
-
-<!-- Spell Q -->
-<div class="col-Q">
-  <h2 class="spell-title">Spell Q<hr></h2>
-  <div ng-repeat="spellQ in createCtrl.spellsQ | orderBy:createCtrl.filter">
-    <div class="spellQcard">
-      <h5>{{spellQ.name}}</h5>
-      <img class="spell-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/spell/{{spellQ.image.full}}"/>
-      <p>{{spellQ.description}}</p>
-    </div>
-  </div>
-</div>
-<!-- end Q -->
-
-<!-- Spell W -->
-<div class="col-W">
-  <h2 class="spell-title">Spell W<hr></h2>
-  <div ng-repeat="spellW in createCtrl.spellsW | orderBy:createCtrl.filter">
-    <div class="spellWcard">
-      <h5>{{spellW.name}}</h5>
-      <img class="spell-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/spell/{{spellW.image.full}}"/>
-      <p>{{spellW.description}}</p>
-    </div>
-  </div>
-</div>
-<!-- end W -->
-
-<!-- Spell E -->
-<div class="col-E">
-  <h2 class="spell-title">Spell E<hr></h2>
-  <div ng-repeat="spellE in createCtrl.spellsE | orderBy:createCtrl.filter">
-    <div class="spellEcard">
-      <h5>{{spellE.name}}</h5>
-      <img class="spell-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/spell/{{spellE.image.full}}"/>
-      <p>{{spellE.description}}</p>
-    </div>
-  </div>
-</div>
-<!-- end E -->
-
-<!-- Spell R -->
-<div class="col-R">
-  <h2 class="spell-title">Spell R<hr></h2>
-  <div ng-repeat="spellR in createCtrl.spellsR | orderBy:createCtrl.filter">
-    <div class="spellRcard">
-      <h5>{{spellR.name}}</h5>
-      <img class="spell-pics" ng-src="http://ddragon.leagueoflegends.com/cdn/6.22.1/img/spell/{{spellR.image.full}}"/>
-      <p>{{spellR.description}}</p>
-    </div>
-  </div>
-</div>
-<!-- end R -->
